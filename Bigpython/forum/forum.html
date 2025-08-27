@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UACompatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/blocks/layout.css" />
+    <link rel="stylesheet" href="css/blocks/startDiscussion.css">
+    <link rel="stylesheet" href="css/blocks/tweet.css" />
+
+    <script src="../login/login.js"></script>
+    <script src="/forum/reply.js"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+  </head>
+  <body id="body">
+    <header>
+      <h2 class="logo">BigPython</h2>
+      <nav class="navigation">
+          <a href="../index1.html">Home</a>
+          <a href="../courses/courses.html">Courses</a>
+          <a href="../library/library.html">Library</a>
+          <a href="../forum/forum.html">Forum</a>
+          <ul class="dropdown">
+              <li>
+                  <a href="#">Activity</a>
+                  <ul class="submenu">
+                      <li><a href="../activity/puzzle/question1.html">Puzzle</a></li>
+                      <li><a href="../activity/directorBot/directorBot.html">DirectorBot</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <a href="../about us/aboutus.html">About</a>
+      </nav>
+      <div id="profileCenter" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100px; margin-top: 20px;">
+          <a href="../login/login.html"><span class="iconLogin" style="font-size: 60px; margin-bottom: -20px;"><ion-icon name="person-circle-outline"></ion-icon></span>
+            <div id="profile">
+              <h4 style="color: #ffd814dd; text-align: center;"><label id="tag"></label><label id="un"></label></h4>
+            </div>
+          </a>
+
+  </header>
+    <button data-modal-target ="#modal" class ="startDiscussionBtn">Start a discussion &rarr;</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="wrapper1">
+          <div class="input-box">
+            <div class="tweet-area">
+              <span class="placeholder">Start a discussion...</span>
+              <form>
+              <div id="com" class="input editable" contenteditable="true" spellcheck="false"></div>
+              <div class="readonly" contenteditable="true" spellcheck="false"></div>
+            </form>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="content">
+              <span class="counter">100</span>
+              <button id="btnPost" type="button" style="color: black;">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="layout">
+        <div class="tweet">
+          <img class="tweet__author-logo" src="./images/profile-image-1.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Becki (& Chris)
+              </div>
+              <div class="tweet__author-slug">
+                @beckiandchris
+              </div>
+              <div class="tweet__publish-time">
+                23/05/2023
+              </div>
+            </div>
+            <div class="tweet__content">
+              first
+            </div>
+          </div>
+         <button class="tweet-reply-button1">Reply</button>
+        </div>
+
+        <div class="reply1">
+          <img class="tweet__author-logo" src="./images/profile-pic.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Me <!-- Your name -->
+              </div>
+            </div>
+            <div class="tweet__content">
+              <input type="text" id="rep1" autocomplete="off" maxlength="100" placeholder="Your reply..." style="width: 500px; background: transparent; color: white;"> <!-- print output -->
+              <input type="button" id="repSubmit1" value="Submit">
+              <p class="repOutput1" id="repOutput1"></p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tweet">
+          <img class="tweet__author-logo" src="./images/profile-image-2.png" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Chris Martin
+              </div>
+              <div class="tweet__author-slug">
+                @chris_martin
+              </div>
+              <div class="tweet__publish-time">
+                29/04/2023
+              </div>
+            </div>
+            <div class="tweet__content">
+              why do I receive the following message in my terminal? ("holes" --
+              <a href="https://typeclasses.com/typed-holes"
+                >https://typeclasses.com/typed-holes</a
+              >)
+              <img class="tweet__image" src="./images/post-image-1.jpeg" />
+            </div>
+          </div>
+         <button class="tweet-reply-button2">Reply</button>
+        </div>
+
+        <div class="reply2">
+          <img class="tweet__author-logo" src="./images/profile-pic.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Me <!-- Your name -->
+              </div>
+            </div>
+            <div class="tweet__content">
+              <input type="text" id="rep2" autocomplete="off" maxlength="100" placeholder="Your reply..." style="width: 500px; background: transparent; color: white;"> <!-- print output -->
+              <input type="button" id="repSubmit2" value="Submit">
+              <p class="repOutput2" id="repOutput2"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tweet">
+          <img class="tweet__author-logo" src="./images/profile-image-4.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                crazyCat
+              </div>
+              <div class="tweet__author-slug">
+                @immacat
+              </div>
+              <div class="tweet__publish-time">
+                02/01/2023
+              </div>
+            </div>
+            <div class="tweet__content">
+              python! hellow world
+            </div>
+          </div>
+          <button class="tweet-reply-button3">Reply</button>
+        </div>
+
+        <div class="reply3">
+          <img class="tweet__author-logo" src="./images/profile-pic.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Me <!-- Your name -->
+              </div>
+            </div>
+            <div class="tweet__content">
+              <input type="text" id="rep3" autocomplete="off" maxlength="100" placeholder="Your reply..." style="width: 500px; background: transparent; color: white;"> <!-- print output -->
+              <input type="button" id="repSubmit3" value="Submit">
+              <p class="repOutput3" id="repOutput3"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tweet">
+          <img class="tweet__author-logo" src="./images/profile-image-3.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Alexndr Wang
+              </div>
+              <div class="tweet__author-slug">
+                @alnxdrwng
+              </div>
+              <div class="tweet__publish-time">
+                02/03/2023
+              </div>
+            </div>
+            <div class="tweet__content">
+              can anyone explain the logic in week4? I've been stuck for so long.
+            </div>
+          </div>
+          <button class="tweet-reply-button4">Reply</button>
+        </div>
+
+        <div class="reply4">
+          <img class="tweet__author-logo" src="./images/profile-pic.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Me <!-- Your name -->
+              </div>
+            </div>
+            <div class="tweet__content">
+              <input type="text" id="rep4" autocomplete="off" maxlength="100" placeholder="Your reply..." style="width: 500px; background: transparent; color: white;"> <!-- print output -->
+              <input type="button" id="repSubmit4" value="Submit">
+              <p class="repOutput4" id="repOutput4"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tweet">
+          <img class="tweet__author-logo" src="./images/profile-image-3.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Alexndr Wang
+              </div>
+              <div class="tweet__author-slug">
+                @alnxdrwng
+              </div>
+              <div class="tweet__publish-time">
+                02/03/2023
+              </div>
+            </div>
+            <div class="tweet__content">
+              week5 also
+            </div>
+          </div>
+          <button class="tweet-reply-button5">Reply</button>
+        </div>
+
+        <div class="reply5">
+          <img class="tweet__author-logo" src="./images/profile-pic.jpg" />
+          <div class="tweet__main">
+            <div class="tweet__header">
+              <div class="tweet__author-name">
+                Me <!-- Your name -->
+              </div>
+            </div>
+            <div class="tweet__content">
+              <input type="text" id="rep5" maxlength="100" autocomplete="off" placeholder="Your reply..." style="width: 500px; background: transparent; color: white;"> <!-- print output -->
+              <input type="button" id="repSubmit5" value="Submit">
+              <p class="repOutput5" id="repOutput5"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMMENT OUTPUT -->
+        
+        <div id="comments">
+        
+        </div>
+
+    </div>
+    <div id="overlay"></div>
+
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    showUsername();
+    showGreeting();
+    showComment();
+  });
+      </script>
+
+  </body>
+</html>

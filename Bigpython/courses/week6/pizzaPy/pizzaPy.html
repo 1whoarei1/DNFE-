@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="pizzaPy.css">
+    <link rel="icon" type="image/png" href="../../logo.png">
+</head>
+<body>
+    <div id="menu-bars" class="fas fa-bars"></div>
+    <header>
+      <a href="../../courses.html" class="logo"><span>Big</span> Python </a>
+      <nav class="navbar">
+          <a href="../../week0/week0.html">Week 0: Setting Up</a>
+          <a href="../../week1/week1.html">Week 1: Conditionals</a>
+          <a href="../../week2/week2.html">Week 2: Loops</a>
+          <a href="../../week3/week3.html">Week 3: Exceptions</a>
+          <a href="../../week4/week4.html">Week 4: Libraries</a>
+          <a href="../../week5/week5.html">Week 5: Unit Tests</a>
+          <a href="../../week6/week6.html">Week 6: File I/O</a>
+          <a href="../../week7/week7.html">Week 7: OOP</a>
+      </nav>
+      <div class="follow">
+        <a href="../../../index1.html"><img src="../../image/home.png" width="30px" height="25px"></a>
+        <a href="../../../library/library.html"><img src="../../image/library.png" width="30px" height="27px"></a>
+      </div>
+        </nav>
+    </header>
+    <section class="instruct" id="about">
+        
+        <div class="instruction">
+            <h2>Pizza Py</h2>
+            <div class="line"></div>
+            <br><br>
+            <blockquote>
+              <p style="text-indent: 30px;">Perhaps the most popular place for pizza in Harvard Square is Pinocchio’s Pizza & Subs, aka Noch’s, known for its Sicilian pizza, which is “a deep-dish or thick-crust pizza.”</p>
+              <p>
+                <br>Sicilian Pizza,Small,Large<br>
+Cheese,$25.50,$39.95<br>
+1 item,$27.50,$41.95<br>
+2 items,$29.50,$43.95<br>
+3 items,$31.50,$45.95<br>
+Special,$33.50,$47.95<br>
+              </p>
+              <br>
+              <p>In a file called pizza.py, implement a program that expects exactly one command-line argument, the name (or path) of a CSV file in Pinocchio’s format, and outputs a table formatted as ASCII art using tabulate, a package on PyPI at pypi.org/project/tabulate. Format the table using the library’s grid format. If the user does not specify exactly one command-line argument, or if the specified file’s name does not end in .csv, or if the specified file does not exist, the program should instead exit via sys.exit.</p>
+              
+              <a data-id="" id="demo" style="top: -57.4545px;"></a><h2><a data-id="" href="#demo">Demo</a></h2>
+
+<script async="" data-autoplay="1" data-cols="80" data-loop="1" data-rows="16" id="asciicast-3nNF1eXtVr4mZOTzhxtpV94pp" src="https://asciinema.org/a/3nNF1eXtVr4mZOTzhxtpV94pp.js"></script>
+
+              <a data-id="" id="how-to-test"></a><h2><a data-id="" class="instruction" href="#how-to-test">How to Test</a></h2>
+              <p>To test your tests, run pytest test_fuel.py. Be sure you have a copy of a fuel.py file in the same folder. Try to use correct and incorrect versions of fuel.py to determine how well your tests spot errors:</p>
+              <ul class="fa-ul">  
+              <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p>Run your program with python pizza.py. Your program should exit using sys.exit and provide an error message:</p>
+                  <div class="box"><code>Too few command-line arguments</code></div>
+                </li>
+              <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p>Be sure to download regular.csv and sicilian.csv, placing them in the same folder as pizza.py. Run your program with python pizza.py regular.csv sicilian.csv. Your program should output:</p>
+                  <div class="box"><code>Too many command-line arguments</code></div>
+                </li>
+                <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p>Run your program with python pizza.py invalid_file.csv. Assuming invalid_file.csv doesn’t exist, your program should exit using sys.exit and provide an error message:</p>
+                  <div class="box"><code>File does not exist</code></div>
+                </li>
+                <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p>Create a file named sicilian.txt. Run your program with python pizza.py sicilian.txt. Your program should exit using sys.exit and provide an error message:</p>
+                  <div class="box"><code>Not a CSV file</code></div>
+                </li>
+
+              </ul>
+              
+              
+              <p>You can execute the below to check your code using the code below, but be sure to test it yourself as well!</p>
+              
+              <div class="box"><code>Check/python/week6/pizza</code></div>
+              
+              <p>Green smilies mean your program has passed a test! Red frownies will indicate your program output something unexpected. Goodluck 😊</p>     </div>
+              
+                      
+               
+                      <script src="../../../assets/page.js?1692463667"></script>
+            
+              <div id="shimeji-workArea" style="position: fixed; background: transparent; z-index: 2147483643; width: 100vw; height: 100vh; left: 0px; top: 0px; transform: translate(0px, 0px); pointer-events: none;"></div></body>
+        <script src="pizzaPy.js"></script>
+</body>
+</html>    

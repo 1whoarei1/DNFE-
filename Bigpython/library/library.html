@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="library.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.topology.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+</head>
+<body id="body">
+    <div id="menu-bars" class="fas fa-bars"></div>
+    <header>
+        <h2 class="logo">BigPython</h2>
+        <nav class="navigation">
+            <a href="../index1.html">Home</a>
+            <a href="../courses/courses.html">Courses</a>
+            <a href="../library/library.html">Library</a>
+            <a href="../forum/forum.html">Forum</a>
+            <ul class="dropdown">
+                <li>
+                    <a href="#">Activity</a>
+                    <ul class="submenu">
+                        <li><a href="../activity/puzzle/question1.html">Puzzle</a></li>
+                        <li><a href="../activity/directorBot/directorBot.html">DirectorBot</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="../about us/aboutus.html">About</a>
+        </nav>
+        <div id="profileCenter" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100px; margin-top: 20px;">
+            <a href="../login/login.html"><span class="iconLogin" style="font-size: 60px; margin-bottom: -20px;"><ion-icon name="person-circle-outline"></ion-icon></span>  </a> 
+    </header>
+    <div class="spacer"></div>
+    <section class="container">
+        <div class="card">
+            <h2>NumPy:</h2>
+            <p>Purpose: NumPy is used for numerical and array operations in Python. It provides support for large, multi-dimensional arrays and matrices, along with mathematical functions to operate on these arrays.</p>
+        </div>
+        <div class="card">
+            <h2>Pandas:</h2>
+                <p>Purpose: Pandas is a data manipulation and analysis library. It offers data structures like DataFrames and Series to work with structured data effectively.</p>
+        </div>
+        <div class="card">
+            <h2>Matplotlib:</h2>
+                <p>Purpose: Matplotlib is a 2D plotting library. It allows you to create a wide range of static, animated, or interactive plots and graphs.</p>
+        </div>
+        <div class="card">
+            <h2>Seaborn:</h2>
+            <p>Purpose: Seaborn is built on top of Matplotlib and provides a high-level interface for creating informative and attractive statistical graphics.</p>
+        </div>
+        <div class="card">
+            <h2>Scikit-Learn:</h2>
+                <p>Purpose: Scikit-Learn is a machine learning library for Python. It includes a wide range of machine learning algorithms for classification, regression, clustering, and more.</p>
+        </div>
+        <div class="card">
+            <h2>Requests:</h2>
+                <p>Purpose: Requests is a library for making HTTP requests in Python. It simplifies sending HTTP GET and POST requests, making it easy to work with web APIs.</p>
+        </div>
+        <div class="card">
+            <h2>Beautiful Soup:</h2>
+                <p>Purpose: Beautiful Soup is a library for web scraping. It helps parse HTML and XML documents, making it easy to extract data from web pages.</p>
+        </div>
+        <div class="card">
+            <h2>Flask:</h2>
+                <p>Purpose: Flask is a lightweight web framework for building web applications in Python. It is easy to get started with and ideal for beginners interested in web development.</p>
+        </div><div class="card">
+            <h2>SQLite3:</h2>
+                <p>Purpose: SQLite3 is a built-in library for working with SQLite databases. It's a simple and lightweight database system, making it suitable for small-scale applications.</p>
+        </div>
+        <div class="card">
+            <h2>Random:</h2>
+                <p>Purpose: The random library provides functions for generating random numbers and making random selections. It's commonly used in games and simulations.</p>
+        </div>
+        <div class="card">
+        <h2>Pygame:</h2>
+            <p>Purpose: A library for creating 2D games. It simplifies game development by handling low-level details.</p>
+        </div>
+        <div class="card">
+            <h2>TensorFlow:  </h2>
+                <p>Purpose: An open-source machine learning framework developed by Google. While it's powerful, TensorFlow also offers beginner-friendly high-level APIs like Keras.</p>
+        </div>
+        <div class="card">
+            <h2>Keras: </h2>
+                <p>Purpose: A high-level neural networks API that runs on top of TensorFlow. It's known for its simplicity and ease of use.</p>
+        </div>
+        <div class="card">
+            <h2>Arrow:</h2>
+            <p>Purpose: A library for working with dates, times, and timestamps. It provides easy-to-use functions for manipulating and formatting time data.</p>
+        </div>
+        <div class="card">
+            <h2>Pathlib:</h2>
+                <p>Purpose:A library for working with filesystem paths. It provides a more intuitive and object-oriented way to deal with file paths.</p>
+        </div>
+        <div class="card">
+            <h2>Scrapy:</h2>
+                <p>Purpose: A powerful and widely used web crawling and web scraping framework. While it has a learning curve, it's beginner-friendly once you grasp the basics.</p>
+        </div>
+        <div class="card">
+            <h2>Tkinter:</h2>
+                <p>Purpose: A standard GUI library that comes with Python. It's simple and suitable for building basic desktop applications with graphical interfaces.</p>
+        </div>
+        <div class="card">
+            <h2>SQLAlchemy: </h2>
+                <p>Purpose: A SQL toolkit and Object-Relational Mapping (ORM) library. It simplifies database interaction by allowing you to work with Python objects instead of raw SQL.</p>
+        </div><div class="card">
+            <h2>FastAPI:</h2>
+                <p>A modern, fast (high-performance), web framework for building APIs with Python. It's relatively easy to learn and efficient for creating APIs.</p>
+        </div>
+        <div class="card">
+            <h2>pytest</h2>
+                <p>Purpose: A popular and beginner-friendly testing framework that simplifies writing and running test cases in Python.</p>
+        </div>
+    </section>
+    <script>
+        VANTA.TOPOLOGY({
+          el: "#body",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x261d09,
+          backgroundColor: 0x0
+        })
+        </script>
+</body>
+</html>

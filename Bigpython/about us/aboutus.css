@@ -1,0 +1,223 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+  body {
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+      margin: 0rem;
+      overflow: hidden;
+    }
+
+    header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.9rem 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    
+}
+header nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0% 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  .logo {
+      font-size: 2em;
+      color: white;
+      user-select: none;
+      
+  }
+
+  .navigation a {
+      position: relative;
+      font-size: 1.1em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 40px;
+      
+  }
+
+  .navigation a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      border-radius: 5px;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .5s;
+  }
+
+  .navigation a:hover::after {
+      transform-origin: left;
+      transform: scaleX(1);
+  }
+
+  .iconLogin {
+    font-size: 48px; /* Adjust the size as needed */
+    color: #ffffff; /* Set the color of the icon */
+    padding-top: 5px;
+    transition: color 0.1s ease-in-out;
+}
+
+.iconLogin:hover {
+    transition-delay: 0.2s;
+    color: #162938;
+}
+
+  .navigation .btnLogin-popup {
+      width: 130px;
+      height: 50px;
+      background: transparent;
+      border: 3px solid #fff;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1em;
+      color: #fff;
+      font-weight: 500;
+      margin-left: 40px;
+      transition: .5s ;
+  }
+
+  .navigation .btnLogin-popup:hover {
+      background: #fff;
+      color: #162938;
+
+  }
+    #image-track {
+      display: flex;
+      gap: 4vmin;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(0%, -50%); 
+      user-select: none; 
+    }
+    
+    #image-track > .image {
+      width: 40vmin;
+      height: 56vmin;
+      object-fit: cover;
+      object-position: 100% center;
+    }
+
+    
+    body.menu-toggled > .meta-link > span {
+      color: rgb(30, 30, 30);
+    }
+    
+    #source-link {
+      bottom: 60px;
+    }
+    
+    #source-link > i {
+      color: rgb(94, 106, 210);
+    }
+    
+    #yt-link > i {
+      color: rgb(239, 83, 80);
+    }
+    
+    .meta-link {
+      align-items: center;
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      bottom: 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;  
+      display: inline-flex;
+      gap: 5px;
+      left: 10px;
+      padding: 10px 20px;
+      position: fixed;
+      text-decoration: none;
+      transition: background-color 400ms, border-color 400ms;
+      z-index: 10000;
+    }
+    
+    .meta-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .meta-link > i, .meta-link > span {
+      height: 20px;
+      line-height: 20px;
+    }
+    
+    .meta-link > span {
+      color: white;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+    }
+    
+  ul.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+ul.dropdown .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+    list-style: none;
+}
+
+ul.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    list-style: none;
+}
+
+ul.dropdown li {
+    position: relative;
+    padding: 10px 10px;
+    list-style: none;
+}
+
+ul.dropdown .submenu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+}
+
+ul.dropdown .submenu li:last-child {
+    border-bottom: none;
+    list-style: none;
+}
+
+ul.dropdown a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul.dropdown .submenu a:hover {
+    color: #162938; /* Change this to your desired link hover color */
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UACompatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Website With Login & Registration</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h2 class="logo">BigPython</h2>
+        <nav class="navigation">
+            <a href="../index1.html">Home</a>
+            <a href="../courses/courses.html">Courses</a>
+            <a href="../library/library.html">Library</a>
+            <a href="../forum/forum.html">Forum</a>
+            <ul class="dropdown">
+                <li>
+                    <a href="#">Activity</a>
+                    <ul class="submenu">
+                        <li><a href="../activity/puzzle/question1.html">Puzzle</a></li>
+                        <li><a href="../activity/directorBot/directorBot.html">DirectorBot</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="../about us/aboutus.html">About</a>
+
+        </nav>
+        <div id="profileCenter" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100px;">
+        <span class="iconLogin" style="font-size: 60px; margin-bottom: -20px;"><ion-icon name="person-circle-outline"></ion-icon></span>
+        <div id="profile">
+            <h4 style="color: #ffd814dd; text-align: center;"><label id="tag"></label><label id="un"></label></h4>
+          </div>
+        </div>     
+    </header>
+    <!-- LOGIN -->
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">   <!-- LINK TO PHP, PYTHON,... if possible-->
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input id="username" autocomplete="off" placeholder=" " required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></ion-icon></span>
+                    <input id="pwd" autocomplete="off" type="password" placeholder=" " required>
+                    <label>Password</label>
+                </div>
+                <button onclick="login()" id="loginButton" type="submit" class="btn" style="color: black;"><h4>Login</h4>
+                </button>
+                <div class="login-register">
+                    <p style="color: white;">Don't have an account?<a href="#" class="register-link"> Register</a></p>
+                </div>
+                <div id="msg" style="display:flex;color: crimson; text-align: center; justify-content: center;">
+                    <h3></h3>
+                </div>
+                <span onclick="logout()" id="logoutButton" style="color: white; font-size: 20px; margin-top: 15px; justify-content: center; text-align: center;"><ion-icon name="log-out-outline"></ion-icon></span>
+            </form>
+        </div>
+
+        <!-- REGISTER -->
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input id="username1" autocomplete="off" placeholder=" " required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input id="email" type="email" autocomplete="off" placeholder=" " required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></ion-icon></span>
+                    <input type="password" id="pwd1" autocomplete="off" placeholder=" " required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label style="color: white;"><input type="checkbox" id="agreeCheckbox"> I agree to the terms & conditions</label>
+                </div>
+                <button onclick="register(); toggleRegisterButton()" type="submit" class="btn" id="registerButton" style="color: black;"><h4>Register</h4>
+                </button>
+                <div class="login-register">
+                    <p style="color: white;">Already have an account?<a href="#" class="login-link"> Login</a></p>  <!-- cosmetic link -->
+                    <div id="msg1" style="display:flex;color: crimson; text-align: center; justify-content: center;">
+                        <h3></h3>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+
+    <script>
+        if (localStorage.current_user == null) {
+            logoutButton.style.display = "none";
+        }
+        else {
+            logoutButton.style.display = "block";
+        }
+    </script>
+
+    <script>
+        showUsername();
+        showGreeting();
+    </script>
+    <div class="gradient-section">
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae perferendis rerum neque odio doloremque ad qui enim. Excepturi commodi harum eius culpa totam quod accusamus minima provident neque? Odio.</h3>
+        <img src="MAIN.png" alt="">
+    </div>
+
+</body>
+
+</html>

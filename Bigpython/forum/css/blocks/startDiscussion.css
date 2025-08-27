@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* BTN ANIMATION */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+.startDiscussionBtn {
+  position: fixed; /* Position the button relative to the viewport */
+  bottom: 5%;
+  left: 50%; /* Center horizontally */
+  width: 40%;
+  height:5%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000; /* Adjust z-index as needed */
+  /* Other button styles */
+  opacity: 0.3  ; /* Set the initial opacity */
+  transition: opacity 0.3s ease; /* Add a transition for smooth effect */
+  border-radius: 20px; /* Adjust the value to control the roundness */
+  border: none;
+  display: inline-block;
+
+  outline: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  background: #FFD814;
+  border: 1px solid #FCD200;
+  font-size: 13px;
+  text-align: center;
+  min-width: 200px;
+  font-weight: 500;
+  color: #0F1111;
+}
+
+
+.startDiscussionBtn:hover {
+  opacity: 1; /* Increase opacity on hover */
+  background: #F7CA00;
+  border-color: #F2C200;
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+}
+
+/* ----------------------------------- */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    border-bottom: 1px;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #000000;
+}
+.wrapper1{
+  background: #fff;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 25px 25px 15px 25px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  overflow: auto; /* Add scrollbars when content overflows */
+  max-height: 100vh; /* Limit the maximum height to the viewport height */
+}
+.input-box{
+  padding-top: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.input-box .tweet-area{
+  position: relative;
+  min-height: 130px;
+  max-height: 170px;
+  overflow-y: auto;
+}
+.tweet-area::-webkit-scrollbar{
+  width: 0px;
+}
+.tweet-area .placeholder{
+  position: absolute;
+  margin-top: -3px;
+  font-size: 22px;
+  color: #98A5B1;
+  pointer-events: none;
+}
+.tweet-area .input{
+  outline: none;
+  font-size: 17px;
+  min-height: inherit;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.tweet-area .editable{
+  position: relative;
+  z-index: 5;
+}
+.tweet-area .readonly{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: transparent;
+  background: transparent;
+}
+.readonly .highlight{
+  background: #fd9bb0;
+}
+.input-box .privacy{
+  color: #1da1f2;
+  margin: 15px 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.privacy:hover, .icons li:hover{
+  background: #e7f5fe;
+}
+.privacy i{
+  font-size: 18px;
+}
+.privacy span{
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 7px;
+}
+.bottom{
+  display: flex;
+  margin-top: 13px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom .counter{
+  color: #333;
+  display: none;
+  font-weight: 500;
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #aab8c2;
+}
+.bottom button{
+  padding: 9px 18px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #FFD814;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: background 0.2s ease;
+}
+.bottom button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.bottom button:hover{
+  background: #ffd8148b;
+}

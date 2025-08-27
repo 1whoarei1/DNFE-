@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fuelGauge.css">
+    <link rel="icon" type="image/png" href="../../logo.png">
+</head>
+<body>
+    <div id="menu-bars" class="fas fa-bars"></div>
+    <header>
+      <a href="../../courses.html" class="logo"><span>Big</span> Python </a>
+      <nav class="navbar">
+          <a href="../../week0/week0.html">Week 0: Setting Up</a>
+          <a href="../../week1/week1.html">Week 1: Conditionals</a>
+          <a href="../../week2/week2.html">Week 2: Loops</a>
+          <a href="../../week3/week3.html">Week 3: Exceptions</a>
+          <a href="../../week4/week4.html">Week 4: Libraries</a>
+          <a href="../../week5/week5.html">Week 5: Unit Tests</a>
+          <a href="../../week6/week6.html">Week 6: File I/O</a>
+          <a href="../../week7/week7.html">Week 7: OOP</a>
+      </nav>
+      <div class="follow">
+        <a href="../../../index1.html"><img src="../../image/home.png" width="30px" height="25px"></a>
+        <a href="../../../library/library.html"><img src="../../image/library.png" width="30px" height="27px"></a>
+      </div>
+        </nav>
+    </header>
+    <section class="instruct" id="about">
+        
+        <div class="instruction">
+            <h2>Fuel Gauge</h2>
+            <div class="line"></div>
+            <br><br>
+            <blockquote>
+             
+<p class="float-end ps-2 small w-25"><img width="200px" height="200px" src="51-hsJaA+SL._SL1000_.jpg" alt="fuel gauge"><br>
+    
+    <p style="text-indent: 30px;">Fuel gauges indicate, often with fractions, just how much fuel is in a tank. For instance 1/4 indicates that a tank is 25% full, 1/2 indicates that a tank is 50% full, and 3/4 indicates that a tank is 75% full.
+
+      In a file called fuel.py, implement a program that prompts the user for a fraction, formatted as X/Y, wherein each of X and Y is an integer, and then outputs, as a percentage rounded to the nearest integer, how much fuel is in the tank. If, though, 1% or less remains, output E instead to indicate that the tank is essentially empty. And if 99% or more remains, output F instead to indicate that the tank is essentially full.
+      
+      If, though, X or Y is not an integer, X is greater than Y, or Y is 0, instead prompt the user again. (It is not necessary for Y to be 4.) Be sure to catch any exceptions like ValueError or ZeroDivisionError.</p>
+
+      <a data-id="" id="demo" style="top: -57.4545px;"></a><h2><a data-id="" href="#demo">Demo</a></h2>
+
+<script async="" data-autoplay="1" data-cols="80" data-loop="1" data-rows="12" id="asciicast-6uEeFIieYqM2tlaKcYxA5jA5n" src="https://asc
+iinema.org/a/6uEeFIieYqM2tlaKcYxA5jA5n.js"></script>
+      
+      <a data-id="" id="how-to-test"></a><h2><a data-id="" class="instruction" href="#how-to-test">How to Test</a></h2>
+      <p>Here’s how to test your code manually:</p>
+      <ul class="fa-ul">  
+        <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p>Run your program with python python fuel.py. Type 3/4 and press Enter. Your program should output:</p>
+      <div class="box"><code>75%</code></div>
+        </li>
+        <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p>Run your program with python python fuel.py. Type 1/4 and press Enter. Your program should output:</p>
+          <div class="box"><code>25%</code></div>
+        </li>
+        <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p><p>Run your program with python python fuel.py. Type F and press Enter. Your program should output:</p>
+          <div class="box"><code>F</code></div>
+        </li>
+        <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><p><p>Run your program with python python fuel.py. Type 0/4 and press Enter. Your program should output:</p>
+          <div class="box"><code>E</code></div>
+        </li>
+      </ul>
+      
+      <p>You can execute the below to check your code using the code below, but be sure to test it yourself as well!</p>
+      
+      <div class="box"><code>Check/python/week3/fuel</code></div>
+      
+      <p>Green smilies mean your program has passed a test! Red frownies will indicate your program output something unexpected. Goodluck 😊</p>
+                      </div>
+               
+                      <script src="../../../assets/page.js?1692463667"></script>
+              
+              
+              <div id="shimeji-workArea" style="position: fixed; background: transparent; z-index: 2147483643; width: 100vw; height: 100vh; left: 0px; top: 0px; transform: translate(0px, 0px); pointer-events: none;"></div></body>
+        <script src="fuelGauge.js"></script>
+</body>
+</html>    
