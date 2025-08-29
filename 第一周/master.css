@@ -1,0 +1,469 @@
+*,
+*::before,
+*::after{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins",sans-serif;
+}
+
+::selection{
+    background-color: #162938;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.9rem 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    
+}
+header nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0% 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.logo {
+    font-size: 3.5em;
+    color: white;
+    user-select: none;
+    font-family: 'Great Vibes', cursive;
+    font-style: italic; 
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.login {
+    position: relative;
+    font-size: 2em;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+    text-decoration: none;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;   
+    background: transparent;
+    border: 3px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s ;
+    text-decoration: none;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #ffffff;
+    color: #376ccd;
+    text-decoration: none;
+}
+
+main{
+    position: relative ;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.parallax{
+    pointer-events: none;
+    transition: 0.45s cubic-bezier(.2,.49,.32,.99)
+}
+
+.bg-img {
+    position: absolute;
+    width: 1980px;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+.person1 {
+    position: absolute;
+    width: 620px;
+    height: 530px;
+    top: 480px;
+    left: 280px;
+    z-index: 3;
+}
+.person2 {
+    position: absolute;
+    width: 560px;
+    height: 550px;
+    top: 500px;
+    left: 1160px;
+    z-index: 3;
+}
+
+.person3 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 670px;
+    left: 700px;
+    z-index: 3;
+}
+
+
+.TEXT {
+     position: absolute;
+    z-index: 3;
+    width: 300px;
+    height: auto;
+    top: 280px;
+    left: 50%;
+    
+}
+
+.vignette {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%), rgba(0,0,0,0.7);
+    pointer-events: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+#menu-bars{
+    position: fixed;
+    top: 1rem; right: 1rem;
+    z-index: 10000;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+ }
+
+.iconLogin {
+    font-size: 48px; /* Adjust the size as needed */
+    color: #ffffff; /* Set the color of the icon */
+    padding-top: 5px;
+    transition: color 0.1s ease-in-out;
+}
+
+.iconLogin:hover {
+    transition-delay: 0.2s;
+    color: #162938;
+}
+
+@media (max-width: 1090px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+    
+        position: absolute;
+        top: 100%;
+        right: 2%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50 ease;
+    }
+}
+/* Login Box */
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background-color: #162938b8; /* Semi-transparent white background */
+    border: 2px;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;   /* REMOVE TO CHECK */
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+    margin-top: 3%;
+    z-index: 100;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #ffd814;
+    font-size: 2em;
+    color: #2c2c2cbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {  /* TITLE */
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #5e6673;
+    margin: 40px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: -10%;    /* input label (email & password Y axis position) */
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:not(:placeholder-shown)~label {
+    top: -9px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 7px; 
+    top: -7 px;   /* mail and lock icon logo Y-position */
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #FFD814;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #F0B90B;
+    text-decoration: none;
+}
+
+.login-register p a:hover {
+    text-decoration: none;
+    color: #FCD535;
+}
+
+.hide-answer-button {
+    display: none !important;
+  }
+
+  /* Checkbox */
+  @keyframes vibrate {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-5px);
+    }
+    40% {
+      transform: translateX(5px);
+    }
+    60% {
+      transform: translateX(-5px);
+    }
+    80% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .checkbox-vibrate {
+    animation: vibrate 0.3s ease infinite;
+    color: rgb(169, 0, 0); /* You can change the color to indicate an issue */
+  }  
+
+  ul.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+ul.dropdown .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+    list-style: none;
+}
+
+ul.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    list-style: none;
+}
+
+ul.dropdown li {
+    position: relative;
+    padding: 10px 10px;
+    list-style: none;
+}
+
+ul.dropdown .submenu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+}
+
+ul.dropdown .submenu li:last-child {
+    border-bottom: none;
+    list-style: none;
+}
+
+ul.dropdown a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul.dropdown .submenu a:hover {
+    color: #162938; /* Change this to your desired link hover color */
+}

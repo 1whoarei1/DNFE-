@@ -1,0 +1,91 @@
+
+@layer utilities {
+    .glow-primary {
+        box-shadow: 0 0 20px rgba(82, 103, 167, 0.8),  
+                    0 0 40px rgba(59, 84, 128, 0.6),   
+                    0 0 60px rgba(26, 34, 52, 0.4),           
+    }
+    .glow-secondary {
+        box-shadow: 0 0 20px rgba(227, 132, 200, 0.8),
+                    0 0 40px rgba(224, 84, 208, 0.6),
+                    0 0 60px rgba(231, 35, 178, 0.4);
+    }
+    .glow-accent {
+        box-shadow: 0 0 20px rgba(217, 119, 6, 0.8),
+                    0 0 40px rgba(217, 119, 6, 0.6),
+                    0 0 60px rgba(217, 119, 6, 0.4);
+    }
+    .glow-purple {
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.8),
+                    0 0 40px rgba(124, 58, 237, 0.6),
+                    0 0 60px rgba(124, 58, 237, 0.4);
+    }
+    .glow-red {
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.8),
+                    0 0 40px rgba(220, 38, 38, 0.6),
+                    0 0 60px rgba(220, 38, 38, 0.4);
+    }
+    .glow-teal {
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.8),
+                    0 0 40px rgba(16, 185, 129, 0.6),
+                    0 0 60px rgba(16, 185, 129, 0.4);
+    }
+}
+
+/* 全屏设置 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 主内容区背景图 */
+body {
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 按钮样式 */
+.member-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.member-btn:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.btn-circle {
+    transition: all 0.3s ease;
+}
+
+/* 弹窗动画 */
+.modal-backdrop {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-backdrop.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+    

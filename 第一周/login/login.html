@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG DATA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- 背景容器 -->
+    <div class="custom-bg-container" style="background-image: url('./background.jpg');">
+        <!-- 登录卡片 -->
+        <div class="form-card">
+            <div class="form-title">
+                <i class="fa fa-sign-in"></i>
+                <h2>Account login</h2>
+                <p>Please enter the account information to log in</p>
+            </div>
+
+            <form id="loginForm">
+                <!-- 用户名输入框 -->
+                <div class="form-group">
+                    <label for="username">username</label>
+                    <div class="input-wrapper">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="username" class="form-control" placeholder="Please enter your username" required>
+                    </div>
+                    <p class="error-text" id="usernameError">The user name cannot be empty</p>
+                </div>
+
+                <!-- 密码输入框 -->
+                <div class="form-group">
+                    <div class="password-label-wrapper">
+                        <label for="password">password</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                        <button type="button" id="togglePwd" class="toggle-password">
+                            <i class="fa fa-eye-slash"></i>
+                        </button>
+                    </div>
+                    <p class="error-text" id="passwordError">The password is invalid (at least 6 digits)</p>
+                </div>
+
+                <!-- 登录按钮 -->
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-rocket"></i>
+                    <span>login system</span>
+                </button>
+
+                <!-- 跳转注册 -->
+                <div class="link-text">
+                    Don't have an account yet?<a href="#" id="showRegisterModal">Register now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 注册弹窗 -->
+    <div id="registerModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Account registration</h3>
+                <button type="button" id="closeRegisterModal" class="modal-close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            
+            <form id="registerForm">
+                <!-- 用户名 -->
+                <div class="form-group">
+                    <label for="regUsername">username</label>
+                    <div class="input-wrapper">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="regUsername" class="form-control" placeholder="Please set a user name (2-12 characters)" required>
+                    </div>
+                    <p class="error-text" id="regUsernameError">The user name does not meet the requirements</p>
+                </div>
+
+                <!-- 密码 -->
+                <div class="form-group">
+                    <label for="regPassword">password</label>
+                    <div class="input-wrapper">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="regPassword" class="form-control" placeholder="Please set a password (at least 6 digits)" required>
+                        <button type="button" id="toggleRegPwd" class="toggle-password">
+                            <i class="fa fa-eye-slash"></i>
+                        </button>
+                    </div>
+                    <p class="error-text" id="regPasswordError">The password does not meet the requirements</p>
+                </div>
+
+                <!-- 确认密码 -->
+                <div class="form-group">
+                    <label for="regConfirmPwd">confirm password</label>
+                    <div class="input-wrapper">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="regConfirmPwd" class="form-control" placeholder="Please re-enter your password" required>
+                        <button type="button" id="toggleConfirmPwd" class="toggle-password">
+                            <i class="fa fa-eye-slash"></i>
+                        </button>
+                    </div>
+                    <p class="error-text" id="regConfirmPwdError">The two passwords are not consistent</p>
+                </div>
+
+                <!-- 注册按钮 -->
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-check"></i>
+                    <span>create an account</span>
+                </button>
+
+                <!-- 跳转登录 -->
+                <div class="link-text">
+                    Already have an account?<a href="#" id="showLoginForm">Return to login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

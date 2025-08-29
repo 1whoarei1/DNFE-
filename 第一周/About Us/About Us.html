@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="About Us.css">
+</head>
+<body class="">
+    <div class="h-screen flex flex-col">
+        <!-- 页面头部 -->
+        <header class="py-6 px-8">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-white text-center">
+                    Profiles of Team Members
+                </h1>
+                <div style="width: 500px;  margin: 0 auto; ">
+                    <p class="text-gray-200 text-center mt-2">Data for No Edge (DNFE for short) ，which is committed to presenting the charm of data science. Follow us, and you will be exposed to a brand-new field.Click the buttons below to learn more details</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 主内容区 -->
+        <main class="flex-1 flex items-center justify-center p-8">
+            <!-- 按钮容器 -->
+            <div class="w-full max-w-6xl grid grid-cols-3 gap-x-16 gap-y-12">
+                <!-- 成员1 -->
+                <div class="member-btn flex flex-col items-center" data-member="1">
+                    <div class="btn-circle w-44 h-44 rounded-full bg-white/70 border-2 border-gray-200 flex items-center justify-center hover:border-primary hover:glow-primary">
+                        <span class="text-gray-800 font-bold text-xl">Liu Zichen</span>
+                    </div>
+                </div>
+                
+                <!-- 成员2 -->
+                <div class="member-btn flex flex-col items-center" data-member="2">
+                    <div class="btn-circle w-44 h-44 rounded-full bg-white/70 border-2 border-gray-200 flex items-center justify-center hover:border-pink-500 hover:glow-secondary"> 
+                        <span class="text-gray-800 font-bold text-xl">Li Zhiman</span>  
+                    </div>
+                </div>
+                
+                <!-- 成员3 -->
+                <div class="member-btn flex flex-col items-center" data-member="3">
+                    <div class="btn-circle w-44 h-44 rounded-full bg-white/70 border-2 border-gray-200 flex items-center justify-center hover:border-accent hover:glow-accent">
+                        <span class="text-gray-800 font-bold text-xl">Yang Chen</span>
+                    </div>
+                </div>
+                
+                <!-- 成员4 -->
+                <div class="member-btn flex flex-col items-center" data-member="4">
+                    <div class="btn-circle w-44 h-44 rounded-full bg-white/70 border-2 border-gray-200 flex items-center justify-center hover:border-purple-500 hover:glow-purple">
+                        <span class="text-gray-800 font-bold text-xl">Xiong Xinweiyang</span>
+                    </div>
+                </div>
+                
+                <!-- 成员5 -->
+                <div class="member-btn flex flex-col items-center" data-member="5">
+                    <div class="btn-circle w-44 h-44 rounded-full bg-white/70 border-2 border-gray-200 flex items-center justify-center hover:border-red-500 hover:glow-red">
+                        <span class="text-gray-800 font-bold text-xl">Wang Ruolin</span>
+                    </div>
+                </div>
+                
+                <!-- 成员6 -->
+                <div class="member-btn flex flex-col items-center" data-member="6">
+                    <div class="btn-circle w-44 h-44 rounded-full bg-white/70 border-2 border-gray-200 flex items-center justify-center hover:border-teal-500 hover:glow-teal">
+                        <span class="text-gray-800 font-bold text-xl">Gu Qian</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- 页脚 -->
+        <footer class="bg-dark text-white py-4 px-8">
+            <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
+                © 2025 Big Data | Team Members
+            </div>
+        </footer>
+    </div>
+    
+    <!-- 成员详情弹窗 -->
+    <div id="member-modal" class="modal-backdrop fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-xl shadow-2xl w-full max-w-5xl max-h-[85vh] overflow-hidden flex flex-col md:flex-row">
+            <!-- 照片区域 -->
+            <div class="md:w-2/5 bg-gray-100">
+                <img id="member-photo" src="" alt="成员照片" class="w-full h-full object-cover">
+            </div>
+            
+            <!-- 信息区域 -->
+            <div class="md:w-3/5 p-6 md:p-8 overflow-y-auto">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h2 id="member-name" class="text-2xl md:text-3xl font-bold text-dark"></h2>
+                        <p id="member-role" class="text-gray-500 mt-1 text-lg"></p>
+                    </div>
+                    <button id="close-modal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fa fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-gray-700 font-semibold mb-2">个人简介</h3>
+                        <p id="member-bio" class="text-gray-600 leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
